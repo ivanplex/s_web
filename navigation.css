@@ -1,0 +1,34 @@
+ul.navigation {
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 1rem;	
+	list-style-type: none;
+
+}
+
+ul.navigation li {
+	float: left;
+    position: relative
+}
+
+ul.navigation li.active a,
+ul.navigation li a.active {
+    color: #fcfcfc;
+}
+
+ul.navigation li a:hover {
+    color: #FFF0BA!important
+}
+
+ul.navigation a {
+    padding: 0 .9rem;
+    display: inline-block;
+    line-height: 3rem;
+    height: 3rem;
+    color: #F27A35;
+    text-shadow: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+    text-decoration: none;
+}

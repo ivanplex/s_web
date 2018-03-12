@@ -1,14 +1,19 @@
+#menu{
+    margin: auto;
+    width: 75%;
+}
+
 ul.navigation {
 	font-weight: 400;
 	text-transform: uppercase;
-	font-size: 1rem;	
+	font-size: 1rem;
 	list-style-type: none;
-
+    padding-top: 20px;
 }
 
 ul.navigation li {
 	float: left;
-    position: relative
+    position: relative;
 }
 
 ul.navigation li.active a,
@@ -31,4 +36,25 @@ ul.navigation a {
     -moz-transition: color 0.3s;
     transition: color 0.3s;
     text-decoration: none;
+}
+
+#frontpage{
+    padding-top: 150px;
+}
+
+#clock{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+#form{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+
+#checkbox{
+    padding-top: 10px;
+    padding-left: 40px;
 }

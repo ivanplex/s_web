@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="timeline.css">
 		<link rel="stylesheet" href="theme.css">
 		<link rel="stylesheet" href="navigation.css">
+		<link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css" />
 		<script src="sketch.min.js"></script>
 
 
@@ -29,28 +30,64 @@
 		<div class="showcase-content">
 			<div class="container">
 				<div class="row">
-					<a id="logo" href="https://getgrav.org">
+					<!--<a id="logo" href="https://getgrav.org">
         				<svg id="sonex-logo"></svg>
-      				</a>
+      				</a>-->
+					<a class="navbar-brand" href="#"><img src="img/Sonex_Transparent.png" alt="Sonex Logo" height="60" width="120"></a>
       				<nav id="menu">
 						<ul class="navigation">
-	    			    	<li class="active"><a href="#"><span>hendrerit</span></a></li>
-	    			    	<li class=""><a href="#"><span>gravida</span></a></li>
-	    			    	<li class=""><a href="#"><span>rutrum</span></a></li>
-	    			    	<li class=""><a href="#"><span>quisque</span></a></li>
-	    			    	<li class=""><a href="#"><span>non</span></a></li>
-						    <li><a href="#"><span>tellus</span></a></li>
+	    			    	<li class="active"><a href="index.html"><span>Home</span></a></li>
+	    			    	<li class=""><a href="#"><span>Private Sales</span></a></li>
+	    			    	<li class=""><a href="#"><span>One Pager</span></a></li>
+	    			    	<li class=""><a href="#"><span>White Paper</span></a></li>
+	    			    	<li class=""><a href="#"><span>Contact Us</span></a></li>
 						</ul>
 					</nav>
 				</div>
 
 			</div>
 			<div class="container">
-				<main role="main" class="inner cover">
-			        <h1 class="cover-heading">SONEX</h1>
-			        <p class="lead">Cras interdum velit id leo blandit, ut egestas massa.</p>
+				<main role="main" class="inner cover" id="frontpage">
+					<a class="navbar-brand" href="#"><img src="img/Sonex_Transparent.png" alt="Sonex Logo" height="120" width="240"></a>
+			        <h1 class="lead">Our public sales is launching in...</h1>
+					<div id="clock">
+						<div class="clock-builder-output"></div>
+						<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+						<script type="text/javascript" src="clock_assets/flipclock.js"></script>
+						<style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn { color: #CCCCCC; background-color: #333333; } body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot { background: #323434; } body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a { color: #323434; }</style>
+						<script type="text/javascript">
+							$(function(){
+								FlipClock.Lang.Custom = { days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds' };
+								var opts = {
+									clockFace: 'DailyCounter',
+									countdown: true,
+									language: 'Custom'
+								};
+								var countdown = 1523059200 - ((new Date().getTime())/1000); // from: 04/07/2018 12:00 am +0000
+								countdown = Math.max(1, countdown);
+								$('.clock-builder-output').FlipClock(countdown, opts);
+							});
+						</script>
+					</div>
 			        <p class="lead">
-			          <a href="#" class="btn btn-lg btn-secondary">White Paper</a>
+					<form id="form">
+						<div class="row">
+							<div class="col-5">
+								<input type="text" class="form-control" placeholder="Name">
+							</div>
+							<div class="col-5">
+								<input type="text" class="form-control" placeholder="Email">
+							</div>
+							<div class="col-2">
+								<button type="submit" class="btn btn-secondary">Submit</button>
+							</div>
+						</div>
+						<div class="row" id="checkbox">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+							<label class="form-check-label" for="inlineCheckbox1">Are you happy to recieve emails from us?</label>
+						</div>
+
+					</form>
 			        </p>
 			    </main>
 		      	<!-- <div class="content revealOnScroll animated fadeIn" data-animation="fadeIn" data-timeout="100">

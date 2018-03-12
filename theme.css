@@ -10,8 +10,9 @@ html, body {
 #gradient-bg {
 	height: 150px;
 	width: 100%;
-	background: linear-gradient(#222C32, #111619);
+	background: linear-gradient(#1c2428, #111619);
 }
+
 #color-divider {
 	height: 5px;
     background-color: #0ec1f6;
@@ -20,7 +21,7 @@ html, body {
 }
 
 .sketch {
-  background: #222C32;
+  background: #1c2428;
   display: block; 
   z-index: 0;
 }

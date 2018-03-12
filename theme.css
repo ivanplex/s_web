@@ -13,7 +13,7 @@ html, body {
 	background: linear-gradient(#1c2428, #111619);
 }
 
-#color-divider {
+.color-divider {
 	height: 5px;
     background-color: #0ec1f6;
     background-image: -webkit-linear-gradient(-360deg,#ffff00,#ff0000);

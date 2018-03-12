@@ -48,6 +48,12 @@ ul.navigation a {
     padding: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    #clock {
+        width: 300px;
+    }
+}
+
 #form{
     margin: auto;
     width: 60%;

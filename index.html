@@ -17,6 +17,8 @@
 		<link rel="stylesheet" href="timeline.css">
 		<link rel="stylesheet" href="theme.css">
 		<link rel="stylesheet" href="navigation.css">
+		<link rel="stylesheet" href="body.css">
+		<link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css" />
 		<script src="sketch.min.js"></script>
 
 
@@ -25,32 +27,70 @@
 
 	<body>
 
+	<!-- MAIN PAGE -->
+
 		<!-- <canvas class=" sketch"></canvas> -->
 		<div class="showcase-content">
 			<div class="container">
 				<div class="row">
-					<a id="logo" href="https://getgrav.org">
+					<!--<a id="logo" href="https://getgrav.org">
         				<svg id="sonex-logo"></svg>
-      				</a>
+      				</a>-->
+					<a class="navbar-brand" href="#"><img src="img/Sonex_Transparent.png" alt="Sonex Logo" height="60" width="120"></a>
       				<nav id="menu">
 						<ul class="navigation">
-	    			    	<li class="active"><a href="#"><span>hendrerit</span></a></li>
-	    			    	<li class=""><a href="#"><span>gravida</span></a></li>
-	    			    	<li class=""><a href="#"><span>rutrum</span></a></li>
-	    			    	<li class=""><a href="#"><span>quisque</span></a></li>
-	    			    	<li class=""><a href="#"><span>non</span></a></li>
-						    <li><a href="#"><span>tellus</span></a></li>
+	    			    	<li class="active"><a href="index.html"><span>Home</span></a></li>
+	    			    	<li class=""><a href="#"><span>Private Sales</span></a></li>
+	    			    	<li class=""><a href="#"><span>One Pager</span></a></li>
+	    			    	<li class=""><a href="#"><span>White Paper</span></a></li>
+	    			    	<li class=""><a href="#contact"><span>Contact Us</span></a></li>
 						</ul>
 					</nav>
 				</div>
 
 			</div>
 			<div class="container">
-				<main role="main" class="inner cover">
-			        <h1 class="cover-heading">SONEX</h1>
-			        <p class="lead">Cras interdum velit id leo blandit, ut egestas massa.</p>
+				<main role="main" class="inner cover" id="frontpage">
+					<a><img src="img/Sonex_Transparent.png" alt="Sonex Logo" height="120" width="240"></a>
+			        <h1 class="lead">Our public sales is launching in...</h1>
+					<div id="clock">
+						<div class="clock-builder-output"></div>
+						<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+						<script type="text/javascript" src="clock_assets/flipclock.js"></script>
+						<style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn { color: #CCCCCC; background-color: #333333; } body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot { background: #323434; } body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a { color: #323434; }</style>
+						<script type="text/javascript">
+							$(function(){
+								FlipClock.Lang.Custom = { days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds' };
+								var opts = {
+									clockFace: 'DailyCounter',
+									countdown: true,
+									language: 'Custom'
+								};
+								var countdown = 1523059200 - ((new Date().getTime())/1000); // from: 04/07/2018 12:00 am +0000
+								countdown = Math.max(1, countdown);
+								$('.clock-builder-output').FlipClock(countdown, opts);
+							});
+						</script>
+					</div>
 			        <p class="lead">
-			          <a href="#" class="btn btn-lg btn-secondary">White Paper</a>
+					<form id="form">
+						<div class="row">
+							<div class="col-5">
+								<input type="text" class="form-control" placeholder="Name">
+							</div>
+							<div class="col-5">
+								<input type="text" class="form-control" placeholder="Email">
+							</div>
+							<div class="col-2">
+								<button type="submit" class="btn btn-secondary">Submit</button>
+							</div>
+						</div>
+						<div class="row" id="checkbox">
+							<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+							<label class="form-check-label" for="inlineCheckbox1">Are you happy to recieve emails from us?</label>
+						</div>
+
+					</form>
 			        </p>
 			    </main>
 		      	<!-- <div class="content revealOnScroll animated fadeIn" data-animation="fadeIn" data-timeout="100">
@@ -58,20 +98,56 @@
 					<h5>Grav is a modern open source flat-file CMS</h5>
 	        	</div> -->
 			</div>
-			
 		</div>
+
 		<script src="particle.min.js"></script>
 
 
 		<div id="gradient-bg"></div>
-		<div id="color-divider"></div>
+		<div class="color-divider"></div>
 
 
-		<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-	      <h1 class="display-4">Why Sonex?</h1>
-	    </div>
+	<!-- MISSION -->
 
-		<div class="container">
+		<div class="container" id="mission">
+			<h1 class="text-center">OUR MISSION</h1>
+			<div class="row">
+				<div class="col-md-4" align="center">
+					<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					<h3>Heading</h3>
+					<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Praesent commodo cursus magna.</p>
+				</div>
+				<div class="col-md-4" align="center">
+					<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					<h3>Heading</h3>
+					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				</div>
+				<div class="col-md-4" align="center">
+					<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					<h3>Heading</h3>
+					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fermentum massa justo sit amet risus.</p>
+				</div>
+			</div>
+		</div>
+
+	<!-- TOKEN INFORMATION -->
+
+		<div class="container" id="tokenInfo" style="background-color: #192126">
+			<h1 class="text-center">TOKEN INFORMATION</h1>
+			<div class="row">
+				<div class="col-lg-7">
+					<img src="img/token_breakdown.PNG" alt="Token Breakdown" width="600" height="250">
+				</div>
+				<div class="col-lg-5">
+					<img src="img/sales_timeline.PNG" alt="Sales Timeline" width="400" height="250">
+				</div>
+			</div>
+		</div>
+
+	<!-- TIMELINE -->
+
+		<div class="container" id="timeline">
+			<h1 class="text-center">WHY SONEX?</h1>
 			<section id="cd-timeline" class="cd-container">
 			<div class="cd-timeline-block">
 				<div class="cd-timeline-img cd-picture">
@@ -162,95 +238,181 @@
 
 
 
+	<!-- TEAM INFO -->
+
+	<div class="containerSlideShow" id="teamInfo">
+
+		<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="color: black">
+			<h1 style="padding-bottom: 10px">OUR FOUNDERS</h1>
+			  <div class="row">
+				  <div class="col-md-2" align="center">
+					  <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					  <h3>Asher Fischbaum</h3>
+					  <p>CEO</p>
+				  </div>
+				  <div class="col-md-2" align="center">
+					  <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					  <h3>Ignac Szigeti</h3>
+					  <p>HCM & Business Dev</p>
+				  </div>
+				  <div class="col-md-2" align="center">
+					  <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					  <h3>Tom Phipps</h3>
+					  <p>Marketing</p>
+				  </div>
+				  <div class="col-md-2" align="center">
+					  <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					  <h3>John-Ross Chambers</h3>
+					  <p>Investor Relations</p>
+				  </div>
+				  <div class="col-md-2" align="center">
+					  <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					  <h3>Brian Formento</h3>
+					  <p>CTO</p>
+				  </div>
+				  <div class="col-md-2" align="center">
+					  <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+					  <h3>Pawel Kostkowski</h3>
+					  <p>Developer</p>
+				  </div>
+		  </div>
+		  <div class="product-device box-shadow d-none d-md-block"></div>
+		  <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+		</div>
 
 
-	<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">Punny headline</h1>
-        <p class="lead font-weight-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this example based on Apple's marketing pages.</p>
-        <a class="btn btn-outline-secondary" href="#">Coming soon</a>
-      </div>
-      <div class="product-device box-shadow d-none d-md-block"></div>
-      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-    </div>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			  <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+			  <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+			  <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+			</ol>
+			<div class="carousel-inner">
+			  <div class="carousel-item">
+				<img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+				<div class="container">
+				  <div class="carousel-caption text-left">
+					<h1>Example headline.</h1>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="carousel-item active">
+				<img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+				<div class="container">
+				  <div class="carousel-caption">
+					<h1>Another example headline.</h1>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="carousel-item">
+				<img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+				<div class="container">
+				  <div class="carousel-caption text-right">
+					<h1>One more for good measure.</h1>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+			  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+			  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
 
+	<!-- PARTNERS -->
 
+	<div class="container" id="partners" style="background-color: #192126">
+		<h1 class="text-center">PARTNERS</h1>
+		<div class="row">
+			<div class="col-md-12" align="center">
+				<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+				<h3>UniStore</h3>
+			</div>
+		</div>
+	</div>
 
+	<!-- CONTACT US -->
 
-
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-          <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item">
-            <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-            <div class="container">
-              <div class="carousel-caption text-left">
-                <h1>Example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item active">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-            <div class="container">
-              <div class="carousel-caption">
-                <h1>Another example headline.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-            <div class="container">
-              <div class="carousel-caption text-right">
-                <h1>One more for good measure.</h1>
-                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-
-
-    <div class="container">
+    <div class="container" id="contact">
+		<h1 class="text-center">CONTACT US</h1>
+		<h5 align="center">Find us at any of the following channels</h5>
+		<br>
     	<div class="row">
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
-          </div><!-- /.col-lg-4 -->
+          <div class="col-md-4" align="center">
+			  <a href="https://www.w3schools.com">
+              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"></a>
+          </div>
+          <div class="col-md-4" align="center">
+			  <a href="https://www.w3schools.com">
+              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"></a>
+          </div>
+          <div class="col-md-4" align="center">
+			  <a href="https://www.w3schools.com">
+              <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140"></a>
+          </div>
         </div>
     </div>
-
 
 	</body>
+
+	<footer>
+		<div class="color-divider"></div>
+		<div class="containerStyle">
+			<div class="row">
+				<div class="col-md-4">
+					<a><img src="img/Sonex_Transparent.png" alt="Sonex Logo" height="80" width="160"></a>
+					<h5>1 Fore Street</h5>
+					<h5>Moorgate</h5>
+					<h5>London</h5>
+					<h5>EC2Y SEJ</h5>
+				</div>
+				<div class="col-md-5">
+					<ul class="navigation" style="display: inline-flex">
+						<div class="col-md-6">
+							<li class=""><a href="index.html"><span>Home</span></a></li>
+							<li class=""><a href="#mission"><span>Our Mission</span></a></li>
+							<li class=""><a href="#tokenInfo"><span>Token Info</span></a></li>
+						</div>
+						<div class="col-md-6">
+							<li class=""><a href="#timeline"><span>Timeline</span></a></li>
+							<li class=""><a href="#teamInfo"><span>Team Info</span></a></li>
+							<li class=""><a href="#partners"><span>Partners</span></a></li>
+						</div>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<div class="row" style="padding: 20px">
+						<div class="col-md-6">
+						<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="80" height="80">
+						</div>
+						<div class="col-md-6">
+						<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="80" height="80">
+						</div>
+					</div>
+					<div class="row" style="padding: 20px">
+						<div class="col-md-6">
+							<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="80" height="80">
+						</div>
+						<div class="col-md-6">
+							<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="80" height="80">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
 </html>

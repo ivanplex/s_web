@@ -32,22 +32,11 @@
     height:auto;
     max-width: 1350px;
     width:auto;
-
 }
 
 .carousel{
     margin: auto;
     text-align: center;
-}
-
-.carousel-item{
-    height: 400px;
-}
-
-@media(max-width: 600px) {
-    .carousel-item{
-        height: 600px;
-    }
 }
 
 #slide{

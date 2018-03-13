@@ -42,10 +42,9 @@
       				<nav id="menu">
 						<ul class="navigation">
 	    			    	<li class="active"><a href="index.html"><span>Home</span></a></li>
-	    			    	<li class=""><a href="#"><span>Private Sales</span></a></li>
+	    			    	<li class=""><a href="index.html"><span>Private Sales</span></a></li>
 	    			    	<li class=""><a href="onepager.html"><span>One Pager</span></a></li>
-	    			    	<li class=""><a href="#"><span>White Paper</span></a></li>
-	    			    	<li class=""><a href="#contact"><span>Contact Us</span></a></li>
+	    			    	<li class=""><a href="index.html"><span>White Paper</span></a></li>
 						</ul>
 					</nav>
 				</div>
@@ -61,20 +60,51 @@
 						<div class="clock-builder-output"></div>
 						<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 						<script type="text/javascript" src="clock_assets/flipclock.js"></script>
-						<style text="text/css">body .flip-clock-wrapper ul li a div div.inn, body .flip-clock-small-wrapper ul li a div div.inn { color: #CCCCCC; background-color: #333333; } body .flip-clock-dot, body .flip-clock-small-wrapper .flip-clock-dot { background: #323434; } body .flip-clock-wrapper .flip-clock-meridium a, body .flip-clock-small-wrapper .flip-clock-meridium a { color: #323434; }</style>
-						<script type="text/javascript">
-							$(function(){
-								FlipClock.Lang.Custom = { days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds' };
-								var opts = {
-									clockFace: 'DailyCounter',
-									countdown: true,
-									language: 'Custom'
-								};
-								var countdown = 1523059200 - ((new Date().getTime())/1000); // from: 04/07/2018 12:00 am +0000
-								countdown = Math.max(1, countdown);
-								$('.clock-builder-output').FlipClock(countdown, opts);
-							});
+
+						<script>
+						function myFunction(x) {
+						if (x.matches) { // If media query matches
+                            $(function(){
+                                FlipClock.Lang.Custom = { days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds' };
+                                var opts = {
+                                    clockFace: 'DailyCounter',
+                                    countdown: true,
+                                    language: 'Custom'
+                                };
+                                opts.classes = {
+                                    active: 'flip-clock-active',
+                                    before: 'flip-clock-before',
+                                    divider: 'flip-clock-divider',
+                                    dot: 'flip-clock-dot',
+                                    label: 'flip-clock-label',
+                                    flip: 'flip',
+                                    play: 'play',
+                                    wrapper: 'flip-clock-small-wrapper'
+                                };
+                                var countdown = 1523059200 - ((new Date().getTime())/1000); // from: 04/07/2018 12:00 am +0000
+                                countdown = Math.max(1, countdown);
+                                $('.clock-builder-output').FlipClock(countdown, opts);
+                            });
+						} else {
+                            $(function(){
+                                FlipClock.Lang.Custom = { days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds' };
+                                var opts = {
+                                    clockFace: 'DailyCounter',
+                                    countdown: true,
+                                    language: 'Custom'
+                                };
+                                var countdown = 1523059200 - ((new Date().getTime())/1000); // from: 04/07/2018 12:00 am +0000
+                                countdown = Math.max(1, countdown);
+                                $('.clock-builder-output').FlipClock(countdown, opts);
+                            });
+						}
+						}
+
+						var x = window.matchMedia("(max-width: 600px)")
+						myFunction(x) // Call listener function at run time
+						x.addListener(myFunction) // Attach listener function on state changes
 						</script>
+
 					</div>
 			        <p class="lead">
 					<form id="form">
@@ -290,7 +320,7 @@
 					<img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide" style="height: 350px; visibility: hidden">
 					<div class="container">
 						<div class="carousel-caption text-left" style="padding: 40px">
-							<h1>FOUNDERS CNT</h1>
+							<h1>FOUNDERS</h1>
 							<div class="row">
 								<div class="col-md-4" align="center">
 									<img class="rounded-circle" src="img/jon.jpg" alt="Generic placeholder image" width="140" height="140">
@@ -409,18 +439,22 @@
 		<h5 align="center">Find us at any of the following channels</h5>
 		<br>
     	<div class="row">
-          <div class="col-md-4" align="center">
+          <div class="col-md-3" align="center">
 			  <a href="https://www.facebook.com/Sonex.io/">
-              <img class="rounded-circle" src="img/facebook.png" alt="Generic placeholder image" width="140" height="140"></a>
+              <img class="rounded-circle" src="img/facebook.png" alt="Facebook logo" width="120" height="120"></a>
           </div>
-          <div class="col-md-4" align="center">
-			  <a href="https://www.w3schools.com">
-              <img class="rounded-circle" src="img/twitter.png" alt="Generic placeholder image" width="140" height="140"></a>
+          <div class="col-md-3" align="center">
+			  <a href="https://t.me/sonexcoin/">
+              <img class="rounded-circle" src="img/twitter.png" alt="Twitter logo" width="120" height="120"></a>
           </div>
-          <div class="col-md-4" align="center">
-			  <a href="https://www.w3schools.com">
-              <img class="rounded-circle" src="img/instagram.png" alt="Generic placeholder image" width="140" height="140"></a>
+          <div class="col-md-3" align="center">
+			  <a href="https://t.me/sonexcoin/">
+              <img class="rounded-circle" src="img/instagram.png" alt="Instagram" width="120" height="120"></a>
           </div>
+		  <div class="col-md-3" align="center">
+			  <a href="https://t.me/sonexcoin/">
+			  <img class="rounded-circle" src="img/telegram.png" alt="Telegram" width="120" height="120"></a>
+		  </div>
         </div>
     </div>
 
@@ -432,6 +466,7 @@
 			<div class="row">
 				<div class="col-md-3">
 					<a><img src="img/Sonex_Transparent.png" alt="Sonex Logo" height="80" width="160"></a>
+					<h5>Office 6064</h5>
 					<h5>1 Fore Street</h5>
 					<h5>Moorgate</h5>
 					<h5>London</h5>
@@ -455,21 +490,21 @@
 					<div class="row" style="padding: 20px">
 						<div class="col-md-6">
 							<a href="https://www.facebook.com/Sonex.io/">
-								<img class="rounded-circle" src="img/facebook.png" alt="Generic placeholder image" width="70" height="70"></a>
+								<img class="rounded-circle" src="img/facebook.png" alt="Facebook Logo" width="70" height="70"></a>
 						</div>
 						<div class="col-md-6">
 							<a href="https://www.facebook.com/Sonex.io/">
-								<img class="rounded-circle" src="img/twitter.png" alt="Generic placeholder image" width="70" height="70"></a>
+								<img class="rounded-circle" src="img/twitter.png" alt="Twitter Logo" width="70" height="70"></a>
 						</div>
 					</div>
 					<div class="row" style="padding: 20px">
 						<div class="col-md-6">
 							<a href="https://www.facebook.com/Sonex.io/">
-								<img class="rounded-circle" src="img/instagram.png" alt="Generic placeholder image" width="70" height="70"></a>
+								<img class="rounded-circle" src="img/instagram.png" alt="Instagram Logo" width="70" height="70"></a>
 						</div>
 						<div class="col-md-6">
 							<a href="https://t.me/sonexcoin/">
-								<img class="rounded-circle" src="img/telegram.png" alt="Generic placeholder image" width="70" height="70"></a>
+								<img class="rounded-circle" src="img/telegram.png" alt="Telegram Logo" width="70" height="70"></a>
 						</div>
 					</div>
 				</div>

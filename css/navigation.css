@@ -1,6 +1,6 @@
 #menu{
     margin: auto;
-    width: 75%;
+    width: 60%;
 }
 
 ul.navigation {
@@ -46,12 +46,7 @@ ul.navigation a {
     margin: auto;
     width: 70%;
     padding: 10px;
-}
-
-@media only screen and (max-width: 600px) {
-    #clock {
-        width: 300px;
-    }
+    display: contents;
 }
 
 #form{

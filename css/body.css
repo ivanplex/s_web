@@ -22,3 +22,25 @@
     padding: 5px;
 }
 
+#carousel {
+    position: relative;
+    overflow: auto;
+    background-color: transparent;
+    border-radius: 25px;
+    margin-top:50px;
+    padding: 50px;
+    height:auto;
+    max-width: 1350px;
+    width:auto;
+
+}
+
+.carousel{
+    margin: auto;
+    text-align: center;
+}
+
+#slide{
+    height:650px;
+    width:350px;
+}

@@ -44,14 +44,13 @@ ul.navigation a {
 
 #clock{
     margin: auto;
-    width: 70%;
+    width: 65%;
     padding: 10px;
-    display: contents;
 }
 
 #form{
     margin: auto;
-    width: 60%;
+    width: 65%;
     padding: 10px;
 }
 
